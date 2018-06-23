@@ -1,0 +1,11 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:WpfControlLibrary_ItemsList="clr-namespace:WpfControlLibrary_ItemsList;assembly=WpfControlLibrary_ItemsList" x:Class="WpfApplication_ItemsList_Text.MainWindow"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Background="Red">
+
+        <WpfControlLibrary_ItemsList:ItemsList Name="itemsList1" HorizontalAlignment="Left" Height="113" Margin="115,127,0,0" VerticalAlignment="Top" Width="318"/>
+
+    </Grid>
+</Window>

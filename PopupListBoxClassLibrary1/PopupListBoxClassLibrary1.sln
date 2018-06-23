@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopupListBoxClassLibrary1", "PopupListBoxClassLibrary1\PopupListBoxClassLibrary1.csproj", "{3601BCF1-DAA1-4A87-BD08-F8B462CE41D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfControlLibrary_ItemsList", "WpfControlLibrary_ItemsList\WpfControlLibrary_ItemsList.csproj", "{76E7B804-0648-4A89-A707-B1DEC1B7028A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication_ItemsList_Text", "WpfApplication_ItemsList_Text\WpfApplication_ItemsList_Text.csproj", "{FF98CA50-CCAA-408A-B48F-56327F7A06DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_AddSubItem_WpfControlLibrary", "A_AddSubItem_WpfControlLibrary\A_AddSubItem_WpfControlLibrary.csproj", "{D63124C8-F74E-4D35-9EE0-E5DA3A19716A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_AddSubItem_Test_WpfApplication", "A_AddSubItem_Test_WpfApplication\A_AddSubItem_Test_WpfApplication.csproj", "{8EAB395F-3D47-4BAD-8037-D0D3249DDC4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3601BCF1-DAA1-4A87-BD08-F8B462CE41D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3601BCF1-DAA1-4A87-BD08-F8B462CE41D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3601BCF1-DAA1-4A87-BD08-F8B462CE41D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3601BCF1-DAA1-4A87-BD08-F8B462CE41D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76E7B804-0648-4A89-A707-B1DEC1B7028A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76E7B804-0648-4A89-A707-B1DEC1B7028A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76E7B804-0648-4A89-A707-B1DEC1B7028A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76E7B804-0648-4A89-A707-B1DEC1B7028A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF98CA50-CCAA-408A-B48F-56327F7A06DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF98CA50-CCAA-408A-B48F-56327F7A06DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF98CA50-CCAA-408A-B48F-56327F7A06DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF98CA50-CCAA-408A-B48F-56327F7A06DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D63124C8-F74E-4D35-9EE0-E5DA3A19716A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D63124C8-F74E-4D35-9EE0-E5DA3A19716A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D63124C8-F74E-4D35-9EE0-E5DA3A19716A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D63124C8-F74E-4D35-9EE0-E5DA3A19716A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EAB395F-3D47-4BAD-8037-D0D3249DDC4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EAB395F-3D47-4BAD-8037-D0D3249DDC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EAB395F-3D47-4BAD-8037-D0D3249DDC4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EAB395F-3D47-4BAD-8037-D0D3249DDC4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

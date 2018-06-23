@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="A_AddSubItem_WpfControlLibrary.AddSubItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:A_AddSubItem_WpfControlLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style x:Key="TextBlockStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush   ImageSource="{Binding ImageBrushPath}" Stretch="Fill" AlignmentY="Top" AlignmentX="Left" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <DataTemplate x:Key="ModeDataTemplate">
+            <Button   Style="{DynamicResource ButtonTemplate}"   />
+        </DataTemplate>
+        <Style x:Key="ButtonTemplate" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border SnapsToDevicePixels="True"
+                        CornerRadius="5" BorderThickness="0">
+                            <Grid  Width="{Binding ModeWidth}" Height="{Binding ModeHeight}" x:Name="Grid1" >
+                                <Image  x:Name="Image1" Source="{Binding ImagePathA}" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill"/>
+                                <TextBlock MouseDown="TemplateClick"  Text="{Binding TextBlockString}" Opacity="0" />
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="Image1" Property="Source" Value="{Binding ImagePathB}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Name="Root" ShowGridLines="False"  Width="{Binding ActualWidth}" Height="{Binding ActualHeight}" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox  Name="TextBoxNameUp" Grid.Row="0"  Grid.Column="1"  Grid.RowSpan="1" Grid.ColumnSpan="1"   Text="{Binding RelativeSource={RelativeSource   Mode= FindAncestor,  AncestorType={x:Type local:AddSubItem}}, Path=AddSubItemText}"    Style="{StaticResource TextBlockStyle}"  Height="{Binding Path=ActualWidth, ElementName=imgleft}" Width="{Binding Path=ActualWidth, ElementName=imgleft}" Foreground="White" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center" IsHitTestVisible="False" />
+        <TextBox  Name="TextBoxNameDown" Grid.Row="1"  Grid.Column="1"  Grid.RowSpan="1" Grid.ColumnSpan="1"      Style="{StaticResource TextBlockStyle}" Height="{Binding Path=ActualWidth, ElementName=imgleft}" Width="{Binding Path=ActualWidth, ElementName=imgleft}" Foreground="White" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False" />
+
+        <Button  x:Name="imgleft" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="1" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" ContentTemplate="{StaticResource  ModeDataTemplate}" BorderThickness="0" Padding="0"/>
+        <Button x:Name="imgright"  Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="1"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" ContentTemplate="{StaticResource  ModeDataTemplate}"  BorderThickness="0" Padding="0" />
+    </Grid>
+</UserControl>
